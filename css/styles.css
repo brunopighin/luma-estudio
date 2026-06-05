@@ -2,6 +2,7 @@
    LUMA Estudio Creativo — styles.css
    ============================================================ */
 
+
 /* ---- Variables ---- */
 :root {
     --purple:        #F5B08A;
@@ -1231,7 +1232,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .why-card {
     background: #fff;
     border-radius: var(--radius-lg);
-    padding: 40px 32px;
+    padding: 32px 24px;
     border: 1px solid rgba(0,0,0,0.06);
     transition: var(--transition);
     position: relative;
@@ -1253,8 +1254,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .why-card:hover::before { opacity: 1; }
 
 .why-icon {
-    width: 60px; height: 60px;
-    border-radius: var(--radius-md);
+    width: 56px; height: 56px;
+    border-radius: var(--radius-sm);
     background: color-mix(in srgb, var(--wc) 12%, transparent);
     border: 1px solid color-mix(in srgb, var(--wc) 20%, transparent);
     display: flex;
@@ -1262,7 +1263,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     justify-content: center;
     font-size: 1.4rem;
     color: var(--wc);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     transition: var(--transition);
     position: relative;
     z-index: 1;
@@ -1274,7 +1275,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .why-card h3 {
     font-family: 'Sora', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 12px;
@@ -1284,9 +1285,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .why-card:hover h3 { color: #fff; }
 .why-card p {
-    font-size: 0.9rem;
+    font-size: 0.87rem;
     color: var(--text-dark-2);
-    line-height: 1.7;
+    line-height: 1.65;
     position: relative;
     z-index: 1;
     transition: color 0.4s ease;
