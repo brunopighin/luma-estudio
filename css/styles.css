@@ -318,6 +318,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     gap: 5px;
     padding: 8px;
     cursor: pointer;
+    position: relative;
+    z-index: 100;
 }
 .hamburger span {
     display: block;
@@ -1566,51 +1568,47 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================================ */
 @media (max-width: 1100px) {
     .services-grid { grid-template-columns: repeat(3, 1fr); }
-    .hero-container { gap: 40px; }
-    .laptop-screen { width: 300px; }
-    .laptop-base { width: 300px; }
-    .phone-wrap { right: -20px; }
 }
 
 @media (max-width: 900px) {
-    /* Navbar mobile */
+    /* Navbar */
     .hamburger { display: flex; }
     .nav-links {
         position: fixed;
         top: 0; left: 0; right: 0;
         height: 100vh;
-        background: rgba(17,17,17,0.97);
+        background: rgba(0,0,0,0.97);
         backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 8px;
         transform: translateX(100%);
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 99;
     }
     .nav-links.open { transform: translateX(0); }
-    .nav-link { font-size: 1.2rem; padding: 16px 32px; }
+    .nav-link { font-size: 1.2rem; padding: 16px 32px; color: #fff; }
     .btn-nav { font-size: 1.1rem; padding: 16px 32px; }
 
     /* Hero */
     .hero { padding: 120px 0 60px; }
     .hero-container {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 0;
         text-align: center;
     }
+    .hero-logo { margin: 0 auto 24px; }
+    .hero-subtitle { margin: 0 auto 40px; }
+    .hero-subtitle br { display: none; }
     .hero-cta { justify-content: center; }
     .hero-stats { justify-content: center; }
-    .hero-subtitle br { display: none; }
-    .hero-visual { height: 420px; }
-    .laptop-wrap { top: 0; left: 50%; transform: translateX(-50%); animation: none; }
-    .phone-wrap { right: -10px; bottom: 0; }
-    .fc-engagement { right: -10px; top: 0; }
-    .fc-rating { display: none; }
-    .fc-reach { bottom: 80px; left: 0; }
 
     /* Services */
     .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Clients */
+    .clients-track-wrap { padding: 60px 0; }
 
     /* Portfolio */
     .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1621,24 +1619,50 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     /* Why us */
     .why-grid { grid-template-columns: repeat(2, 1fr); }
 
+    /* CTA */
+    .cta-title { font-size: clamp(2rem, 5vw, 3rem); }
+
     /* Footer */
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
     .footer-brand { grid-column: 1 / -1; }
 }
 
 @media (max-width: 600px) {
+    /* Navbar */
+    .logo-img { height: 46px; }
+
+    /* Hero */
+    .hero { padding: 100px 0 50px; }
+    .hero-title { font-size: 2.2rem; }
+    .hero-cta { flex-direction: column; align-items: center; }
+    .hero-cta .btn { width: 100%; text-align: center; justify-content: center; }
+
+    /* Services */
     .services-grid { grid-template-columns: 1fr; }
+
+    /* Clients */
+    .clients-track-wrap { padding: 40px 0; }
+    .client-logo { min-width: 130px; height: 80px; }
+
+    /* Portfolio */
     .portfolio-grid { grid-template-columns: 1fr; }
+
+    /* Why us */
     .why-grid { grid-template-columns: 1fr; }
-    .hero-visual { height: 340px; }
-    .laptop-screen { width: 260px; }
-    .laptop-base { width: 260px; }
-    .phone-wrap { display: none; }
-    .footer-grid { grid-template-columns: 1fr; }
-    .footer-bottom { flex-direction: column; align-items: flex-start; }
-    .cta-actions { flex-direction: column; align-items: center; }
+
+    /* CTA */
+    .cta-actions { flex-direction: column; align-items: stretch; }
+    .cta-actions .btn { width: 100%; text-align: center; justify-content: center; }
     .cta-trust { flex-direction: column; align-items: center; gap: 12px; }
+
+    /* Footer */
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+
+    /* WhatsApp flotante */
     .whatsapp-float { bottom: 20px; right: 20px; width: 52px; height: 52px; font-size: 1.5rem; }
+
+    /* Stats */
     .hero-stats { gap: 12px; }
     .stat-sep { display: none; }
 }
