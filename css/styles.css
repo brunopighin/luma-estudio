@@ -194,16 +194,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     box-shadow: 0 8px 24px rgba(245,176,138,0.65);
 }
 .btn-cta-primary {
-    background: #fff;
-    color: var(--dark);
+    background: var(--grad-purple);
+    color: #fff;
     font-size: 1.1rem;
     padding: 18px 36px;
     border-radius: var(--radius-lg);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 12px 40px rgba(245,176,138,0.4);
 }
 .btn-cta-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 60px rgba(245,176,138,0.6);
 }
 .btn-cta-ghost {
     background: rgba(255,255,255,0.06);
@@ -822,6 +822,97 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================================
+   CLIENTS CAROUSEL
+   ============================================================ */
+.clients {
+    padding: 80px 0 60px;
+    background: var(--light);
+    overflow: hidden;
+}
+
+.clients-track-wrap {
+    overflow: hidden;
+    position: relative;
+    margin-top: 48px;
+    background: #2a2a2a;
+    padding: 110px 0;
+}
+
+.clients-track-wrap::before,
+.clients-track-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+}
+.clients-track-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, #2a2a2a, transparent);
+}
+.clients-track-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, #2a2a2a, transparent);
+}
+
+.clients-track {
+    display: flex;
+    gap: 32px;
+    width: max-content;
+    animation: clients-scroll 28s linear infinite;
+}
+
+.clients-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes clients-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    height: 110px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 16px 28px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #555;
+    white-space: nowrap;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.client-logo:hover {
+    background: #C9A97A;
+    border-color: #C9A97A;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(201,169,122,0.35);
+}
+
+.client-logo img {
+    max-height: 56px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.client-logo:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.35);
+}
+
+/* ============================================================
    SERVICES
    ============================================================ */
 .services {
@@ -849,7 +940,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--card-color), var(--card-color-2));
+    background: var(--grad-purple);
     opacity: 0;
     transition: opacity 0.4s ease;
     border-radius: inherit;
@@ -1040,7 +1131,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .testimonials-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #2D2A32, #111111, #2D2A32);
+    background: var(--light);
 }
 .testimonials > .container { position: relative; z-index: 2; }
 
@@ -1146,21 +1237,20 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     position: relative;
     overflow: hidden;
 }
-.why-card::after {
+.why-card::before {
     content: '';
     position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--wc), transparent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s ease;
+    inset: 0;
+    background: var(--grad-purple);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: inherit;
 }
 .why-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 24px 60px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 24px 60px rgba(245,176,138,0.35);
 }
-.why-card:hover::after { transform: scaleX(1); }
+.why-card:hover::before { opacity: 1; }
 
 .why-icon {
     width: 60px; height: 60px;
@@ -1174,11 +1264,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     color: var(--wc);
     margin-bottom: 24px;
     transition: var(--transition);
+    position: relative;
+    z-index: 1;
 }
 .why-card:hover .why-icon {
-    background: var(--wc);
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.3);
     color: #fff;
-    transform: rotate(-5deg) scale(1.05);
 }
 .why-card h3 {
     font-family: 'Sora', sans-serif;
@@ -1186,12 +1278,20 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s ease;
 }
+.why-card:hover h3 { color: #fff; }
 .why-card p {
     font-size: 0.9rem;
     color: var(--text-dark-2);
     line-height: 1.7;
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s ease;
 }
+.why-card:hover p { color: rgba(255,255,255,0.85); }
 
 /* ============================================================
    CTA FINAL
