@@ -152,9 +152,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .section-header p {
     font-size: clamp(1.5rem, 2.8vw, 2rem);
     font-weight: 700;
+    line-height: 1.2;
     color: var(--text-dark-2);
     max-width: 560px;
-    margin: 0 auto 8px;
+    margin: 0 auto 4px;
 }
 .section-header p:last-child { margin-bottom: 0; }
 .light-header p { color: rgba(255,255,255,0.6); }
@@ -1449,9 +1450,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     color: #111111;
 }
 .cta-subtitle {
-    font-size: 1.1rem;
+    font-size: clamp(1.5rem, 2.8vw, 2rem);
+    font-weight: 700;
     color: #111111;
-    line-height: 1.7;
+    line-height: 1.2;
     margin-bottom: 48px;
 }
 .cta-actions {
