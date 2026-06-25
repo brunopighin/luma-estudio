@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -18,21 +18,24 @@
 </head>
 <body>
 
+    <!-- ====== PRELOADER ====== -->
+    <div class="preloader" id="preloader">
+        <img src="images/logo.png" alt="LUMA Logo" class="preloader-logo">
+    </div>
+
     <!-- ====== NAVBAR ====== -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#inicio" class="logo">
-                <img src="images/WhatsApp Image 2026-06-05 at 15.13.49.jpeg" alt="LUMA Logo" class="logo-img">
+                <img src="images/4 copia-Photoroom.png" alt="LUMA Logo" class="logo-img">
                 <div class="logo-text-wrap">
                     <span class="logo-name">LUMA</span>
                     <span class="logo-tagline">Estudio Creativo</span>
                 </div>
             </a>
             <ul class="nav-links" id="navLinks">
+                <li><a href="#quienes-somos" class="nav-link">Quiénes somos</a></li>
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
-                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
                 <li><a href="#contacto" class="btn btn-nav">Contacto</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Abrir menú">
@@ -54,29 +57,61 @@
 
         <div class="container hero-container">
             <div class="hero-content reveal">
-                <h1 class="hero-title">
-                    Tu proyecto tiene<br>
-                    <span class="gradient-text">algo único.</span><br>
-                    Nosotros te ayudamos<br>a contarlo.
-                </h1>
-                <p class="hero-subtitle">
-                    Impulsamos marcas con diseño, contenido,<br>estrategia digital y desarrollo web.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contacto" class="btn btn-primary">
-                        Solicitar presupuesto
-                    </a>
-                    <a href="#servicios" class="btn btn-ghost">
-                        Ver servicios
-                    </a>
+                <div class="hero-image-placeholder"><img src="images/web banner top copia 2.png" alt="LUMA" class="hero-logo-img"></div>
+                <div class="hero-down-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="hero-title-bg">
+                    <h1 class="hero-title">
+                        <span class="hero-title-main">SOMOS <span class="logo-letter" style="color:#2E7D46;">L</span><span class="logo-letter" style="color:#FFD400;">U</span><span class="logo-letter" style="color:#FF4500;">M</span><span class="logo-letter" style="color:#0047FF;">A</span></span><br>
+                        <span class="hero-title-sub">
+                            <span class="gradient-text">Tu proyecto tiene algo único.</span><br>
+                            Te ayudamos a contarlo.
+                        </span>
+                    </h1>
                 </div>
             </div>
 
         </div>
 
-        <div class="scroll-hint">
-            <span>Scroll</span>
-            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    </section>
+
+    <!-- ====== QUIÉNES SOMOS ====== -->
+    <section class="about" id="quienes-somos">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Conocé al equipo</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo"><img src="images/imagen1.png" alt="Manuel" class="team-photo-img"></div>
+                    <div class="team-info">
+                        <div class="team-name-row">
+                            <h3>Manuel</h3>
+                        </div>
+                        <p class="team-role" style="--tc:#ae75da;">Community Manager & Diseñador</p>
+                        <p class="team-desc">Planificación de contenido, diseño gráfico y edición de video.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo"><img src="images/imagen2.jpeg" alt="Lucía" class="team-photo-img"></div>
+                    <div class="team-info">
+                        <div class="team-name-row">
+                            <h3>Lucía</h3>
+                        </div>
+                        <p class="team-role" style="--tc:#ae75da;">Filmmaker & Productora Audiovisual</p>
+                        <p class="team-desc">Producción audiovisual, fotografía y estrategia digital.</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo"><img src="images/image3.png" alt="Bruno" class="team-photo-img"></div>
+                    <div class="team-info">
+                        <div class="team-name-row">
+                            <h3>Bruno</h3>
+                        </div>
+                        <p class="team-role" style="--tc:#ae75da;">Programación y Diseño web</p>
+                        <p class="team-desc">Desarrollo de software, automatizaciones e IA.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -84,13 +119,12 @@
     <section class="services" id="servicios">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">Lo que hacemos</div>
-                <h2>Servicios diseñados<br><span class="gradient-text">para hacer crecer tu marca</span></h2>
+                <h2>Servicios</h2>
                 <p>Cada servicio está pensado para generar resultados reales y medibles.</p>
             </div>
             <div class="services-grid">
 
-                <div class="service-card reveal" style="--card-color: #F5956A; --card-color-2: #F2946A;">
+                <div class="service-card reveal" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
                     <div class="sc-icon-wrap">
                         <i class="fa-solid fa-share-nodes"></i>
                     </div>
@@ -99,7 +133,7 @@
                     <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
 
-                <div class="service-card reveal delay-1" style="--card-color: #F5956A; --card-color-2: #F2946A;">
+                <div class="service-card reveal delay-1" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
                     <div class="sc-icon-wrap">
                         <i class="fa-solid fa-bullseye"></i>
                     </div>
@@ -108,7 +142,7 @@
                     <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
 
-                <div class="service-card reveal delay-2" style="--card-color: #F5956A; --card-color-2: #F2946A;">
+                <div class="service-card reveal delay-2" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
                     <div class="sc-icon-wrap">
                         <i class="fa-solid fa-people-group"></i>
                     </div>
@@ -117,7 +151,7 @@
                     <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
 
-                <div class="service-card reveal" style="--card-color: #F5956A; --card-color-2: #F2946A;">
+                <div class="service-card reveal" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
                     <div class="sc-icon-wrap">
                         <i class="fa-solid fa-palette"></i>
                     </div>
@@ -126,7 +160,7 @@
                     <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
 
-                <div class="service-card reveal delay-1" style="--card-color: #F5956A; --card-color-2: #F2946A;">
+                <div class="service-card reveal delay-1" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
                     <div class="sc-icon-wrap">
                         <i class="fa-solid fa-film"></i>
                     </div>
@@ -135,7 +169,7 @@
                     <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
 
-                <div class="service-card reveal delay-2" style="--card-color: #F5956A; --card-color-2: #F2946A;">
+                <div class="service-card reveal delay-2" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
                     <div class="sc-icon-wrap">
                         <i class="fa-solid fa-chart-line"></i>
                     </div>
@@ -144,7 +178,7 @@
                     <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
 
-                <div class="service-card reveal" style="--card-color: #F5956A; --card-color-2: #F2946A;">
+                <div class="service-card reveal" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
                     <div class="sc-icon-wrap">
                         <i class="fa-solid fa-calendar-days"></i>
                     </div>
@@ -153,7 +187,7 @@
                     <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
 
-                <div class="service-card reveal delay-1" style="--card-color: #F5956A; --card-color-2: #F2946A;">
+                <div class="service-card reveal delay-1" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
                     <div class="sc-icon-wrap">
                         <i class="fa-solid fa-video"></i>
                     </div>
@@ -162,7 +196,7 @@
                     <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
 
-                <div class="service-card reveal delay-2" style="--card-color: #F5956A; --card-color-2: #F2946A;">
+                <div class="service-card reveal delay-2" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
                     <div class="sc-icon-wrap">
                         <i class="fa-solid fa-code"></i>
                     </div>
@@ -171,7 +205,7 @@
                     <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
 
-<div class="service-card reveal delay-1" style="--card-color: #F5956A; --card-color-2: #F2946A;">
+<div class="service-card reveal delay-1" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
                     <div class="sc-icon-wrap">
                         <i class="fa-solid fa-rocket"></i>
                     </div>
@@ -180,12 +214,21 @@
                     <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
 
-                <div class="service-card reveal delay-2" style="--card-color: #F5956A; --card-color-2: #F2946A;">
+                <div class="service-card reveal delay-2" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
                     <div class="sc-icon-wrap">
                         <i class="fa-solid fa-server"></i>
                     </div>
                     <h3>Sistemas Web Personalizados</h3>
                     <p>Desarrollamos plataformas, CRMs, portales y sistemas a medida según las necesidades de tu negocio.</p>
+                    <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+
+                <div class="service-card reveal" style="--card-color: #bde3c3; --card-color-2: #bde3c3;">
+                    <div class="sc-icon-wrap">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3>Desarrollo de Software</h3>
+                    <p>Creamos aplicaciones y software a medida que automatizan procesos y resuelven necesidades específicas de tu negocio.</p>
                     <div class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
 
@@ -197,116 +240,24 @@
     <section class="clients">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">Confiaron en nosotros</div>
-                <h2>Clientes que confiaron<br><span class="gradient-text">en LUMA</span></h2>
+                <h2>Experiencias</h2>
+                <p>Trabajamos en distintas áreas.</p>
+                <p>Con clientes de todo tipo.</p>
+                <p>Ofreciendo soluciones creativas.</p>
             </div>
         </div>
-        <div class="clients-track-wrap">
-            <div class="clients-track">
-                <div class="client-logo">Marca 1</div>
-                <div class="client-logo">Marca 2</div>
-                <div class="client-logo">Marca 3</div>
-                <div class="client-logo">Marca 4</div>
-                <div class="client-logo">Marca 5</div>
-                <div class="client-logo">Marca 6</div>
+        <div class="web-carousel-wrap">
+            <div class="web-carousel-track">
+                <div class="web-slide"><img src="images/web1.png" alt="Proyecto web 1"></div>
+                <div class="web-slide"><img src="images/web2.png" alt="Proyecto web 2"></div>
                 <!-- duplicado para loop infinito -->
-                <div class="client-logo">Marca 1</div>
-                <div class="client-logo">Marca 2</div>
-                <div class="client-logo">Marca 3</div>
-                <div class="client-logo">Marca 4</div>
-                <div class="client-logo">Marca 5</div>
-                <div class="client-logo">Marca 6</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ====== PORTFOLIO ====== -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-tag">Nuestro trabajo</div>
-                <h2>Proyectos que<br><span class="gradient-text">hablan por sí solos</span></h2>
-                <p>Resultados reales para marcas que apostaron por el cambio.</p>
-            </div>
-            <div class="portfolio-grid">
-
+                <div class="web-slide"><img src="images/web1.png" alt="Proyecto web 1"></div>
+                <div class="web-slide"><img src="images/web2.png" alt="Proyecto web 2"></div>
             </div>
         </div>
     </section>
 
     <!-- ====== TESTIMONIOS ====== -->
-    <section class="testimonials" id="testimonios">
-        <div class="testimonials-bg"></div>
-        <div class="container">
-            <div class="testimonials-grid">
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ====== POR QUÉ ELEGIRNOS ====== -->
-    <section class="why-us" id="nosotros">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-tag">Por qué elegirnos</div>
-                <h2>No somos otra agencia.<br><span class="gradient-text">Somos tu equipo digital.</span></h2>
-                <p>Trabajamos con pasión, estrategia y tecnología de punta para lograr resultados que importan.</p>
-            </div>
-            <div class="why-grid">
-
-                <div class="why-card reveal">
-                    <div class="why-icon" style="--wc: #7C3AED;">
-                        <i class="fa-solid fa-pen-nib"></i>
-                    </div>
-                    <h3>Diseño con propósito</h3>
-                    <p>Cada pixel tiene una razón de ser. Diseñamos para comunicar, emocionar y convertir. Nada es decorativo.</p>
-                </div>
-
-                <div class="why-card reveal delay-1">
-                    <div class="why-icon" style="--wc: #2563EB;">
-                        <i class="fa-solid fa-chess"></i>
-                    </div>
-                    <h3>Estrategia real</h3>
-                    <p>Antes de crear, analizamos. Tu competencia, tu audiencia y tu mercado son el punto de partida de todo.</p>
-                </div>
-
-                <div class="why-card reveal delay-2">
-                    <div class="why-icon" style="--wc: #059669;">
-                        <i class="fa-solid fa-handshake"></i>
-                    </div>
-                    <h3>Atención personalizada</h3>
-                    <p>Tenés un equipo dedicado que conoce tu negocio. Comunicación directa, rápida y sin intermediarios.</p>
-                </div>
-
-                <div class="why-card reveal">
-                    <div class="why-icon" style="--wc: #D97706;">
-                        <i class="fa-solid fa-chart-bar"></i>
-                    </div>
-                    <h3>Resultados medibles</h3>
-                    <p>Reportamos todo con datos reales. Sabés exactamente qué funciona y cómo sigue creciendo tu marca.</p>
-                </div>
-
-                <div class="why-card reveal delay-1">
-                    <div class="why-icon" style="--wc: #DC2626;">
-                        <i class="fa-solid fa-microchip"></i>
-                    </div>
-                    <h3>Tecnología moderna</h3>
-                    <p>Usamos las herramientas más avanzadas del mercado: webs rápidas, automatizaciones y sistemas inteligentes.</p>
-                </div>
-
-                <div class="why-card reveal delay-2">
-                    <div class="why-icon" style="--wc: #EC4899;">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-                    <h3>IA aplicada a negocios</h3>
-                    <p>Integramos inteligencia artificial en tus procesos: chatbots, generación de contenido y análisis predictivo.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <!-- ====== CTA FINAL ====== -->
     <section class="cta-section" id="contacto">
         <div class="cta-bg">
@@ -316,16 +267,12 @@
         </div>
         <div class="container">
             <div class="cta-content reveal">
-                <div class="cta-badge">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    Empezá hoy
-                </div>
                 <h2 class="cta-title">
                     Tu marca merece<br>
                     <span class="cta-gradient">destacar.</span>
                 </h2>
                 <p class="cta-subtitle">
-                    Hablemos de tu proyecto. Sin compromisos,<br>con ideas concretas desde el primer día.
+                    Contanos de tu proyecto.<br>Y empecemos a trabajar.
                 </p>
                 <div class="cta-actions">
                     <a href="https://wa.me/5492323626822?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20sus%20servicios" target="_blank" class="btn btn-cta-primary">
@@ -336,15 +283,10 @@
                         <i class="fa-brands fa-whatsapp"></i>
                         Lu
                     </a>
-                    <a href="mailto:luma.estudioarg@gmail.com" class="btn btn-cta-ghost">
-                        <i class="fa-solid fa-envelope"></i>
-                        Enviar email
+                    <a href="https://wa.me/5492323654029?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20sus%20servicios" target="_blank" class="btn btn-cta-primary">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Bruno
                     </a>
-                </div>
-                <div class="cta-trust">
-                    <span><i class="fa-solid fa-check"></i> Respuesta en menos de 2 horas</span>
-                    <span><i class="fa-solid fa-check"></i> Presupuesto sin costo</span>
-                    <span><i class="fa-solid fa-check"></i> Sin contratos largos</span>
                 </div>
             </div>
         </div>
@@ -356,7 +298,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#inicio" class="logo logo-footer">
-                        <img src="images/WhatsApp Image 2026-06-05 at 15.13.49.jpeg" alt="LUMA Logo" class="logo-img">
+                        <img src="images/4 copia-Photoroom.png" alt="LUMA Logo" class="logo-img">
                         <div class="logo-text-wrap">
                             <span class="logo-name">LUMA</span>
                             <span class="logo-tagline">Estudio Creativo</span>
@@ -381,9 +323,7 @@
                 <div class="footer-col">
                     <h4>Empresa</h4>
                     <ul>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#quienes-somos">Quiénes somos</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
@@ -399,12 +339,12 @@
                             <a href="https://wa.me/5491151793562" target="_blank">Lu · +54 9 11 5179-3562</a>
                         </li>
                         <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:luma.estudioarg@gmail.com">luma.estudioarg@gmail.com</a>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <a href="https://wa.me/5492323654029" target="_blank">Bruno · +54 9 2323 654029</a>
                         </li>
                         <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Buenos Aires, Argentina</span>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:luma.estudioarg@gmail.com">luma.estudioarg@gmail.com</a>
                         </li>
                     </ul>
                 </div>

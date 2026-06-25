@@ -2,6 +2,16 @@
    LUMA Estudio Creativo — main.js
    ============================================================ */
 
+/* ---- Preloader ---- */
+const preloader = document.getElementById('preloader');
+if (preloader) {
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            preloader.classList.add('loaded');
+        }, 1200);
+    });
+}
+
 /* ---- Navbar scroll effect ---- */
 const navbar  = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
