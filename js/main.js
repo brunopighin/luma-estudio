@@ -100,23 +100,6 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 counters.forEach(el => counterObserver.observe(el));
 
-/* ---- Parallax: hero blobs on mouse move ---- */
-const hero = document.querySelector('.hero');
-if (hero) {
-    hero.addEventListener('mousemove', e => {
-        const { clientX, clientY } = e;
-        const cx = window.innerWidth  / 2;
-        const cy = window.innerHeight / 2;
-        const dx = (clientX - cx) / cx;
-        const dy = (clientY - cy) / cy;
-
-        document.querySelectorAll('.blob').forEach((blob, i) => {
-            const factor = (i + 1) * 12;
-            blob.style.transform = `translate(${dx * factor}px, ${dy * factor}px)`;
-        });
-    });
-}
-
 /* ---- Active nav link on scroll ---- */
 const sections = document.querySelectorAll('section[id]');
 const links    = document.querySelectorAll('.nav-link');
