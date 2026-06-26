@@ -2,6 +2,12 @@
    LUMA Estudio Creativo — main.js
    ============================================================ */
 
+/* ---- Always start at top on reload ---- */
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 /* ---- Preloader ---- */
 const preloader = document.getElementById('preloader');
 if (preloader) {
