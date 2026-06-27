@@ -1622,6 +1622,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
     /* Hero */
     .hero { padding: 120px 0 60px; }
+    .hero-image-placeholder { padding-top: 0; }
     .hero-container {
         grid-template-columns: 1fr;
         gap: 0;
